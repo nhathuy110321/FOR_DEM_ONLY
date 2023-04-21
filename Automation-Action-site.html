@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="tutorials.css">
+    <title>Automation Actions Site</title>
+</head>
+
+<body class="body-main">
+    <div>
+        <div class="Header">
+            <div class="Cointainer" id="Header">
+                <div class="row">
+                    <div class="col-4" id="Header-col-left">
+                        <img src="Anh/Logo.png" alt="">
+                    </div>
+                    <div class="col-8" id="Header-col-right">
+                        <a href="http://127.0.0.1:5500/index.html">Home</a>
+                        <a href="http://127.0.0.1:5500/tutorial.html">Tutorial</a>
+                        <a href="http://127.0.0.1:5500/Forum.html">Forum</a>
+                        <a href="http://127.0.0.1:5500/Blogs.html">Blog</a>
+                        <li class=" nav-item dropdown" style="margin: 0px; ">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false" style="font-weight: bold">Demo Sites</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="http://127.0.0.1:5500/Basic-site.html">Basic Site</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="http://127.0.0.1:5500/Automation-Practice-Site.html">Automation Practice
+                                        Site</a></li>
+                                <li><a class="dropdown-item" href="Automation-Action-site.html">Automation Actions Site</a></li>
+
+                                <li><a class="dropdown-item" href="List-product.html">Ecommerce Site</a></li>
+                            </ul>
+                        </li>
+                        <img src="Anh/canada.png" alt="">
+                        <button id="Login" onclick="openLoginPopup()">Login</button>
+                        <button id="Sign-up" onclick="openSigninPopup()">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="forum-header">
+            <div class="Forum-h2">
+                <h2>AUTOMATION ACTIONS SITE</h2>
+            </div>
+        </div>
+        <div class="Acctions-site">
+            <div class="container-actions">
+                <div id="Action" onclick=" showcontainerdrap(1)" >
+                    <a href="#" > Portlets</a>
+                </div>
+                <div id="Action" onclick=" showcontainerdrap(2)" >
+                    <a href="#" > Multiple Lists</a>
+                    
+                </div>
+               <div id="Action"onclick=" showcontainerdrap(3)" > 
+                    <a href="#" > Simple List</a>
+                    
+                </div>
+                <div id="Action" onclick=" showcontainerdrap(4)">
+                    <a href="#"> Grid Sorting</a>
+                 
+                </div>
+                <div id="Action"onclick=" showcontainerdrap(5)" >
+                    <a href="#"> Accepted Elements</a>
+                
+                </div> 
+            </div>
+            <div  id="containerdrap1" class="container-drap">
+                <div class="error">
+
+                    <p>Re-Order Elements provided. For Ex : Move Car to Motobike place</p>
+                    <i class="bi bi-x" id="close-icon"></i>
+                </div>
+                <script>
+                    const closeIcon = document.querySelector('#close-icon');
+                    const alertBox = document.querySelector('.error');
+
+                    closeIcon.addEventListener('click', function () {
+                        alertBox.style.display = 'none';
+                    });
+                </script>
+                <div class="Container-drop">
+                    <div class="drap-and-drop" draggable="true">
+                        <div id="car">
+                            <h4>Car</h4>
+                            <i class="bi bi-dash"></i>
+                        </div>
+                        <p>
+                            Selenium Automation.
+                        </p>
+                    </div>
+                    <div class="drap-and-drop" draggable="true">
+                        <div id="car">
+                            <h4>Motorbike</h4>
+                            <i class="bi bi-dash"></i>
+                        </div>
+                        <p>
+                            Selenium Automation.
+                        </p>
+                    </div>
+
+                    <div class="drap-and-drop" draggable="true">
+                        <div id="car">
+                            <h4>Airplane</h4>
+                            <i class="bi bi-dash"></i>
+                        </div>
+                        <p>
+                            Selenium Automation.
+                        </p>
+                    </div>
+                </div>
+                <div class="Container-drop1">
+                    <div class="drap-and-drop" draggable="true">
+                        <div id="car">
+                            <h4>Train</h4>
+                            <i class="bi bi-dash"></i>
+                        </div>
+                        <p>
+                            Selenium Automation.
+                        </p>
+                    </div>
+                    <div class="drap-and-drop h" draggable="true">
+                        <div id="car">
+                            <h4>Ferry</h4>
+                            <i class="bi bi-dash"></i>
+                        </div>
+                        <p>
+                            Selenium Automation.
+                        </p>
+                    </div>
+                    <div class="drap-and-drop" draggable="true">
+                        <div id="car">
+                            <h4>Ferry</h4>
+                            <i class="bi bi-dash"></i>
+                        </div>
+                        <p>
+                            Selenium Automation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div   id="containerdrap2" class="container-drap">
+                <div class="error">
+    
+                    <p>Re-Order elements of both the lists and swap them if needed</p>
+                    <i class="bi bi-x" id="close-icon"></i>
+                </div>
+                <script>
+                   
+    
+                    closeIcon.addEventListener('click', function () {
+                        alertBox.style.display = 'none';
+                    });
+                </script>
+                <div class="list-object">
+                    <div class="simple-list-object2">
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 1</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 2</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 3</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 4</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 5</p>
+                        </div>            
+                    </div>
+                    <div class="simple-list-object3">
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 1</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 2</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 3</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 4</p>
+                        </div>
+                        <div id="object">
+                            <i class="bi bi-arrows-expand"></i>
+                            <p> Object 5</p>
+                        </div>            
+                    </div>
+                </div>   
+            </div>
+            <div id="containerdrap3" class="container-drap">
+                <div class="error">
+    
+                    <p>Re-Order elements of the list from Object 1 to 7</p>
+                    <i class="bi bi-x" id="close-icon"></i>
+                </div>
+                <script>
+                    
+                    closeIcon.addEventListener('click', function () {
+                        alertBox.style.display = 'none';
+                    });
+                </script>
+                <div class="simple-list-object">
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 1</p>
+                    </div>
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 2</p>
+                    </div>
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 3</p>
+                    </div>
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 4</p>
+                    </div>
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 5</p>
+                    </div>
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 6</p>
+                    </div>
+                    <div id="object">
+                        <i class="bi bi-arrows-expand"></i>
+                        <p> Object 7</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+            <div id="containerdrap4" class="container-drap">
+                <div class="error">
+    
+                    <p>Re-Order Grid elements in descending order.</p>
+                    <i class="bi bi-x" id="close-icon"></i>
+                </div>
+                <script>
+                   
+    
+                    closeIcon.addEventListener('click', function () {
+                        alertBox.style.display = 'none';
+                    });
+                </script>
+                <div class="alpha-list">
+                    <div id="alpha">
+                        <p>A</p>
+                    </div>
+                    <div id="alpha">
+                        <p>B  </p>
+                    </div>
+                    <div id="alpha">
+                        <p>C</p>
+                    </div>
+                    <div id="alpha">
+                        <p>D</p>
+                    </div>
+                </div>
+                <div class="alpha-list">
+                    <div id="alpha">
+                        <p>E</p>
+                    </div>
+                    <div id="alpha">
+                        <p>F </p>
+                    </div>
+                    <div id="alpha">
+                        <p>G</p>
+                    </div>
+                    <div id="alpha">
+                        <p>H</p>
+                    </div>
+                </div>
+                <div class="alpha-list">
+                    <div id="alpha">
+                        <p>I</p>
+                    </div>
+                    <div id="alpha">
+                        <p>J</p>
+                    </div>
+                    <div id="alpha">
+                        <p>K</p>
+                    </div>
+                    <div id="alpha">
+                        <p>L</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="containerdrap5" class="container-drap">
+                <div class="error">
+    
+                    <p>Specify using the “accept” option which element (or group of elements) is accepted by the target droppable.</p>
+                    <i class="bi bi-x" id="close-icon"></i>
+                </div>
+                <script>
+                    
+                    closeIcon.addEventListener('click', function () {
+                        alertBox.style.display = 'none';
+                    });
+                </script>
+                <div class="Accepted-draggable">
+                    <div class="Draggable">
+                            <p id="Draggable-p">I'm draggable but can't be dropped</p>
+                    </div>
+                    <div  class="Draggable">
+                        <p id="Draggable-p2">Drag me to my target</p>
+                    </div>
+                    <div  class="Draggable3">
+                        <p id="Draggable-p2">Drag me to my target</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--  -->
+        <script>
+
+            function showcontainerdrap(n) {
+                    var i;
+                    var  containerdraps = document.getElementsByClassName("container-drap");
+                   
+                    
+                    for (i = 0; i < containerdraps.length; i++) {
+                        containerdraps[i].style.display = "none";
+
+                    }
+                    document.getElementById("containerdrap" + n).style.display = "block";
+
+                    
+                    
+                }
+
+            const draggables = document.querySelectorAll('.drap-and-drop');
+            let dragSrcEl = null;
+
+            for (let i = 0; i < draggables.length; i++) {
+                const draggable = draggables[i];
+
+                draggable.addEventListener('dragstart', dragStart);
+                draggable.addEventListener('dragenter', dragEnter);
+                draggable.addEventListener('dragover', dragOver);
+                draggable.addEventListener('dragleave', dragLeave);
+                draggable.addEventListener('drop', drop);
+                draggable.addEventListener('dragend', dragEnd);
+            }
+
+            function dragStart(e) {
+                dragSrcEl = this;
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/html', this.innerHTML);
+            }
+
+            function dragEnter(e) {
+                this.classList.add('over');
+            }
+
+            function dragOver(e) {
+                e.preventDefault();
+
+                e.dataTransfer.dropEffect = 'move';
+
+                return false;
+            }
+
+            function dragLeave(e) {
+                this.classList.remove('over');
+            }
+
+            function drop(e) {
+                if (dragSrcEl !== this) {
+                    dragSrcEl.innerHTML = this.innerHTML;
+                    this.innerHTML = e.dataTransfer.getData('text/html');
+                }
+
+                return false;
+            }
+
+            function dragEnd(e) {
+                const draggables = document.querySelectorAll('.draggable');
+
+                for (let i = 0; i < draggables.length; i++) {
+                    draggables[i].classList.remove('over');
+                    draggables[i].style.opacity = '1';
+                }
+            }
+
+
+        </script>
+        <!-- Footer -->
+        <div>
+            <div class="Footer">
+                <div class="Row" id="Row-footer">
+                    <div class="col-6">
+                        <div class="endn">
+                            <p id="Footer-p">TUTORIAL</p>
+                            <p>----</p>
+                        </div>
+                        <div id="Footer-end">
+                            <div>
+                                <ul id="Footer-li">
+                                    <li>Java</li>
+                                    <li>Selenium (Java)</li>
+                                    <li>Selenium Automation Framework</li>
+                                    <li>Docker for Selenium</li>
+                                    <li>SmartVent Balance</li>
+                                    <li>TestNG</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <ul id="Footer-li1">
+                                    <li>Jenkins</li>
+                                    <li>Git</li>
+                                    <li>Github</li>
+                                    <li>Maven</li>
+                                    <li>Log4j</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="endn">
+                            <p>DEMO SITES</p>
+                            <p>-----</p>
+                        </div>
+                        <ul id="Footer-li">
+                            <li>Basic Demo Site</li>
+                            <li>Automation Practice Site</li>
+                            <li>Automation Action Site</li>
+                            <li>E-commerce Demo Site</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <div class="endn">
+                            <p>USEFUL LINKS</p>
+                            <p>-----</p>
+                        </div>
+                        <ul id="Footer-li">
+                            <li>Blog</li>
+                            <li>Forum</li>
+                            <li>AContact us</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="Footer-end">
+                <p>© 2020 MS.Robot Corp.</p>
+                <div class="Endd">
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- popup Login -->
+
+
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeLoginPopup()">&times;</span>
+                <h4>Log in to your <span style="color: #0744F2;"> Ms.Robot </span>account!</h4>
+                <form>
+
+                    <input type="text" id="Email" name="Email" placeholder="Email"><br>
+
+                    <input type="password" id="password" name="password" placeholder="Password"><br>
+                    <div id="popup-login">
+                        <input type="submit" value="Login">
+                    </div>
+                    <p>or <a href="#" onclick="openForgotPasswordPopup()">Forgot password</a> </p>
+
+                    <p> Don't have an account <a href="#">Sign up</a></p>
+
+                </form>
+            </div>
+        </div>
+        <script>
+            function openLoginPopup() {
+                document.getElementById("loginPopup").style.display = "block";
+            }
+            function closeLoginPopup() {
+                document.getElementById("loginPopup").style.display = "none";
+            }
+        </script>
+        <!-- Popup forgotPassword -->
+
+
+        <div id="forgotPasswordPopup" class="popup">
+            <div class="popup-content2">
+                <span class="close" onclick="closeForgotPasswordPopup()">&times;</span>
+                <h4>Forgot password</h4>
+                <form>
+
+                    <input type="text" id="email" name="email" placeholder="Email"><br>
+                    <div class="Recaptcha-input">
+                        <input type="checkbox">
+                        <div class="g-recaptcha"
+                            data-sitekey="http://127.0.0.1:5500/index.html?email=&g-recaptcha-response=#">
+
+                        </div>
+
+                    </div>
+                    <div class="Rest-password">
+                        <input onclick="openResetPasswordPopup()" type="submit" value="Reset password">
+                    </div>
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    <p style="text-align: center;">or <a href="#">Login</a> </p>
+
+                </form>
+            </div>
+        </div>
+        <script>
+            function openForgotPasswordPopup() {
+                document.getElementById("loginPopup").style.display = "none";
+                document.getElementById("forgotPasswordPopup").style.display = "block";
+            }
+            function closeForgotPasswordPopup() {
+                document.getElementById("forgotPasswordPopup").style.display = "none";
+            }
+        </script>
+
+        <!-- Reset Password -->
+
+
+        <div id="resetPasswordPopup" class="popup1">
+            <div class="popup-content3">
+                <span class="close" onclick="closeResetPasswordPopup()">&times;</span>
+                <h4>Reset password</h4>
+                <form>
+
+
+
+                    <input type="password" id="newPassword" name="New Password" placeholder="New Password"><br>
+
+
+                    <input type="password" id="VerifyPassword" name="Verify Password" placeholder="Verify Password">
+                    <br>
+                    <div class="verifyPass">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+
+            function openResetPasswordPopup() {
+                document.getElementById("resetPasswordPopup").style.display = "block";
+                document.getElementById("forgotPasswordPopup").style.display = "none";
+            }
+
+            function closeResetPasswordPopup() {
+                document.getElementById("resetPasswordPopup").style.display = "none";
+            }
+        </script>
+
+        <!-- Popup Feedback -->
+
+        <div id="feedbackPopup" class="popup">
+            <div class="popup-content4">
+                <span class="close" onclick="closeFeedbackPopup()">&times;</span>
+                <h2>Your feedback!</h2>
+                <form>
+                    <h3>How do you feel about our website?</h3>
+                    <div class="icon-feedback">
+                        <img src="Anh/feedback_icon1.png" alt="">
+                        <img src="Anh/feedback_icon2.png" alt="">
+                        <img src="Anh/feedback_icon3.png" alt="">
+                        <img src="Anh/feedback_icon4.png" alt="">
+                        <img src="Anh/feedback_icon5.png" alt="">
+                    </div>
+                    <div class="text-feedback">
+                        <p>Like</p>
+                    </div>
+                    <h3>How like are you to recommend our company/product/service to your friends and colleagues?</h3>
+                    <div class="checkbox-container">
+                        <div class="text-container">
+                            <span>0</span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <div class="checkbox-row">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                        </div>
+                    </div>
+                    <div id="text-container">
+                        <p id="text-p1">not at all</p>
+                        <p id="text-p2">very likely</p>
+                    </div>
+                    <h3>Tell us what you like about our website</h3>
+                    <div id="text-footer">
+                        <input type="text" placeholder="The great experience">
+                    </div>
+                    <button id="btn-feedback">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function openFeedbackPopup() {
+                document.getElementById("feedbackPopup").style.display = "block";
+            }
+            function closeFeedbackPopup() {
+                document.getElementById("feedbackPopup").style.display = "none";
+            }
+        </script>
+
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeLoginPopup()">&times;</span>
+                <h4>Log in to your <span style="color: #0744F2;"> Ms.Robot </span>account!</h4>
+                <form>
+
+                    <input type="text" id="Email" name="Email" placeholder="Email"><br>
+
+                    <input type="password" id="password" name="password" placeholder="Password"><br>
+                    <div id="popup-login">
+                        <input type="submit" value="Login">
+                    </div>
+                    <p>or <a href="#" onclick="openForgotPasswordPopup()">Forgot password</a> </p>
+
+                    <p> Don't have an account <a href="#">Sign up</a></p>
+
+                </form>
+            </div>
+        </div>
+        <!-- popup đăng ký -->
+
+
+        <div id="SigninPopup" class="popup">
+            <div class="popup-content6">
+                <span class="close" onclick="closeSigninPopup()">&times;</span>
+                <h4>Sign Up and Start Learning!</h4>
+                <hr>
+                <form>
+                    <input type="email" id="emails" name="email" placeholder="Email" required> <br>
+                    <input type="password" id="password" name="password" placeholder="Password" required> <br>
+                    <input type="password" id="verifypassword" name="verifypassword" placeholder="verify password"
+                        required> <br>
+                    <p id="Sign-up-p">Please use this email & password to login our Demo Sites when using Selenium Test
+                        Automation.</p>
+
+                    <div id="Check-yes">
+                        <input type="checkbox" id="">
+                        <p>Yes! I want to receive emails with Selenium Tips and ebook!</p>
+                    </div>
+                    <button>Sign up</button>
+                    <p>By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a>
+                    </p>
+                    <hr>
+                    <p>Already have an account? <a href="http://127.0.0.1:5500/Ask-question-login.html">Log In</a> </p>
+                </form>
+            </div>
+        </div>
+        <script>
+            function openSigninPopup() {
+                document.getElementById("SigninPopup").style.display = "block";
+            }
+            function closeSigninPopup() {
+                document.getElementById("SigninPopup").style.display = "none";
+            }
+        </script>
+
+      
+    </div>
+</body>
+
+</html>
