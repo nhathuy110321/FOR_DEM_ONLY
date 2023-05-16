@@ -2516,11 +2516,13 @@ select[name="selenium"]:focus {
 .Products li img {
   max-width: 100%;
   height: auto;
+  margin-top: 15px;
 }
 
 .product-item {
   border: 1px solid #E7E7E7;
   text-align: center;
+  height: 290px;
 }
 
 .product-thumb img:hover {
