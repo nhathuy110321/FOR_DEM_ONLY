@@ -1032,7 +1032,7 @@ li {
 }
 
 .Section-2 h4,
-h3 {
+#col-between h3 {
   width: 950px;
   font-family: 'Circular Std';
   font-style: normal;
@@ -1364,11 +1364,10 @@ h3 {
 .Avatar-thaole p {
   margin: 0;
 }
-
-hr {
+#blogs-hr {
   border: 1px solid #AFCFFF;
-  width: 1190px;
-
+  width: 73%;
+  margin-left: 15%;
 }
 
 .Comments-heder {
@@ -1535,7 +1534,7 @@ hr {
 }
 
 #thehr hr {
-  width: 870px;
+  width: 100%;
   border: 1px solid #AFCFFF;
   margin-left: 0px;
 }
@@ -2104,10 +2103,9 @@ box-shadow: 0px 0px 50px rgba(75, 145, 249, 0.2);
 }
 
 .basic-sectiton {
-  margin-left: 17%;
   margin-top: 65px;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-columns: 25% 25% 25% 25%;
   gap: 10px;
 }
 
@@ -2121,13 +2119,13 @@ box-shadow: 0px 0px 50px rgba(75, 145, 249, 0.2);
 }
 
 .basic-article img:hover {
-  transform: scale(1.5);
+  transform: scale(1);
   transition: all ease-in-out 0.5s;
 }
 
 .basic-aside {
   margin-top: 100px;
-  margin-left: 17%;
+  
 }
 
 .basic-aside p {
@@ -2643,11 +2641,6 @@ select[name="selenium"]:focus {
   border: 1px solid #AFCFFF;
 }
 
-#Search-product i {
-  position: absolute;
-  left: 1293px;
-  top: 235px;
-}
 
 .categories-product {
   margin-top: 50px;
@@ -2659,11 +2652,8 @@ select[name="selenium"]:focus {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
-
-
   display: flex;
   align-items: center;
-
   color: #3E3E3E;
 
 }
