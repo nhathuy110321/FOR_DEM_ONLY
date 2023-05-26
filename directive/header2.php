@@ -29,10 +29,19 @@
                 include "configdb.php";
                 if (!isset($_SESSION['Email'])) {
                     header('location:index.php');
-                } else {
-                    echo "xin chao " . $_SESSION['Email'] . "&ensp;&nbsp;";
+                } 
+                else {
+                    ?>
+                    <div id=hello>
+                        <?php
+                    echo "XIN CHÀO " . $_SESSION['Email'] . "&ensp;&nbsp;";
+                        ?>
+                    
+                    </div>
+               
+                <?php
                 }
-                ?>
+            ?>
                 <a href="xulylogout.php">LOG OUT</a>
             </div>
         </div>
