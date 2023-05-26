@@ -35,41 +35,8 @@
 <body class="body-main">
     <div>
         <div id="wrapper">
-            <div class="Header">
-                <div class="Cointainer" id="Header">
-                    <div class="row">
-                        <div class="col-4" id="Header-col-left">
-                            <img src="Anh/Logo.png" alt="">
-                        </div>
-                        <div class="col-8" id="Header-col-right">
-                            <a href="index.html">Home</a>
-                            <a href="tutorial.html">Tutorial</a>
-                            <a href="Forum.html">Forum</a>
-                            <a href="Blogs.html">Blog</a>
-                            <li class=" nav-item dropdown" style="margin: 0px; ">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                                    aria-expanded="false" style="font-weight: bold">Demo Sites</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="Basic-site.html">Basic
-                                            Site</a>
-                                    </li>
-                                    <li><a class="dropdown-item"
-                                            href="Automation-Practice-Site.html">Automation
-                                            Practice
-                                            Site</a></li>
-                                    <li><a class="dropdown-item" href="Automation-Action-site.html">Automation Actions Site</a></li>
-
-                                    <li><a class="dropdown-item" href="List-product.html">Ecommerce Site</a></li>
-                                </ul>
-                            </li>
-                            <img src="Anh/canada.png" alt="">
-                            <button id="Login" onclick="openLoginPopup()">Login</button>
-                            <button id="Sign-up" onclick="openSigninPopup()">Sign up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Header -->
+        <?php include "./directive/header.php" ?>
+            
             <div class="forum-header">
                 <div class="Forum-h2">
                     <h2>ECOMMERCE SITE</h2>
@@ -77,7 +44,7 @@
             </div>
             <div class="product-content">
                 <div class="product-content-top-right">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <p> > </p>
                     <a href="">Galaxy S8</a>
                 </div>
@@ -130,8 +97,8 @@
             <!-- review -->
             <div class="Rectangle">
                 <div class="menu">
-                    <a href="#" onclick="showContent(1)">Description</a>
-                    <a href="#" onclick="showContent(2)">Reviews</a>
+                    <a  onclick="showContent(1)">Description</a>
+                    <a  onclick="showContent(2)">Reviews</a>
                 </div>
                 <div id="Rectangle-hr">
                     <hr>
@@ -327,6 +294,8 @@
             </div>
 
         </div>
+        <!-- Footer -->
+     <?php include "./directive/footer.php" ?>  
 </body>
 
 </html>
